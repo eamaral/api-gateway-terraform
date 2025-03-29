@@ -1,18 +1,19 @@
 variable "region" {
-  default = "us-east-1"
-}
-
-variable "private_subnets" {
-  description = "Lista de subnets privadas"
-  type        = list(string)
-}
-
-variable "lb_security_group_id" {
-  description = "Security Group do Load Balancer"
+  description = "AWS region"
   type        = string
 }
 
-variable "alb_listener_arn" {
-  description = "ARN do listener do ALB interno"
+variable "public_subnets" {
+  description = "Public subnets used by VPC Link"
+  type        = list(string)
+}
+
+variable "vpc_link_sg_id" {
+  description = "Security Group ID used by VPC Link"
+  type        = string
+}
+
+variable "alb_dns_name" {
+  description = "DNS name of the ALB used for integration"
   type        = string
 }
