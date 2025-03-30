@@ -16,8 +16,8 @@ variable "vpc_link_sg_id" {
   default     = ""
 }
 
-variable "alb_dns_name" {
-  description = "DNS name of the ALB used for integration"
+variable "alb_listener_arn" {
+  description = "ARN do listener do ALB usado na integração"
   type        = string
   default     = ""
 }
