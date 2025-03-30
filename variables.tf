@@ -1,23 +1,23 @@
 variable "region" {
-  description = "AWS region"
+  description = "Região da AWS"
   type        = string
   default     = "us-east-1"
 }
 
-variable "public_subnets" {
-  description = "Public subnets used by VPC Link"
+variable "private_subnets" {
+  description = "Subnets privadas usadas pelo VPC Link"
   type        = list(string)
   default     = []
 }
 
-variable "vpc_link_sg_id" {
-  description = "Security Group ID used by VPC Link"
+variable "alb_sg_id" {
+  description = "Security Group usado pelo VPC Link"
   type        = string
   default     = ""
 }
 
-variable "alb_listener_arn" {
-  description = "ARN do listener do ALB usado na integração"
+variable "alb_dns" {
+  description = "DNS público ou privado do ALB"
   type        = string
   default     = ""
 }
