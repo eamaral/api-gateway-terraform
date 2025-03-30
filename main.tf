@@ -23,7 +23,7 @@ resource "aws_apigatewayv2_integration" "alb_integration" {
   api_id                 = aws_apigatewayv2_api.fastfood_api.id
   integration_type       = "HTTP_PROXY"
   integration_method     = "ANY"
-  integration_uri        = "http://${var.alb_dns}" # ← aqui usamos o ALB DNS diretamente
+  integration_uri        = var.alb_listener_arn
   connection_type        = "VPC_LINK"
   connection_id          = aws_apigatewayv2_vpc_link.fastfood_vpc_link.id
   payload_format_version = "1.0"

@@ -16,8 +16,8 @@ variable "alb_sg_id" {
   default     = ""
 }
 
-variable "alb_dns" {
-  description = "DNS público ou privado do ALB"
+variable "alb_listener_arn" {
+  description = "ARN do Listener do ALB para a integração HTTP_PROXY"
   type        = string
   default     = ""
 }
